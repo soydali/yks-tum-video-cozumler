@@ -1,0 +1,28 @@
+:root{
+  /* Daha sakin, yüksek kontrastlı ve göz yormayan palet */
+  --bg:#071423;         /* koyu mavi-gri zemin */
+  --card:#071824;       /* kartlar için hafifçe farklı koyu ton */
+  --muted:#9fb3bf;      /* daha yumuşak, soğuk gri-mavi */
+  --accent:#2dd4bf;     /* mor yerine daha nötr-teal vurgu */
+  --text:#d6eef2;       /* ana metin için yumuşak açık renk */
+}
+*{box-sizing:border-box}
+.body, body{font-family:Segoe UI,SegoeUI,Roboto,Arial,sans-serif;margin:0;background:linear-gradient(180deg,var(--bg),#071423);color:var(--text);min-height:100vh}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.site-header{padding:28px 0;text-align:center}
+.site-header h1{margin:0;font-size:28px}
+.subtitle{color:var(--muted);margin-top:6px}
+#search{width:100%;max-width:480px;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);margin:14px auto 0;background:rgba(255,255,255,0.02);color:var(--text)}
+#search::placeholder{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0.01));width:100%;padding:14px;border-radius:10px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:transform .12s ease,box-shadow .18s, border-color .12s;text-decoration:none;color:inherit}
+.card{border:1px solid rgba(255,255,255,0.02);}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(2,6,23,0.6);border-color:rgba(45,212,191,0.12)}
+.logo{width:56px;height:56px;border-radius:8px;flex:0 0 56px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+.meta{flex:1}
+.meta h3{margin:0;font-size:16px;color:var(--text)}
+.meta p{margin:6px 0 0;color:var(--muted);font-size:13px;overflow-wrap:anywhere;word-break:break-word;max-width:100%}
+.footer{padding:24px 0;color:var(--muted);text-align:center}
+
+img{border-radius: 15px;}
+@media (max-width:520px){.grid{grid-template-columns:1fr}.logo{width:48px;height:48px}}
